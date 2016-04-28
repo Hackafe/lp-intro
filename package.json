@@ -11,6 +11,7 @@
     "//starting": "-",
     "start": "http-server public",
     "dev": "npm run budo -- app/scripts/main.js --serve js/scripts.js --dir public --live",
+    "deploy": "gh-pages -d public",
     "//building": "-",
     "build": "npm run build:js && npm run build:css",
     "build:js": "browserify app/scripts/main.js -d -p [minifyify --map /js/scripts.map.json --output ./public/js/scripts.map.json] > ./public/js/scripts.js",
@@ -27,7 +28,8 @@
     "jscs": "jscs",
     "jshint": "jshint",
     "budo": "budo",
-    "lessc": "lessc"
+    "lessc": "lessc",
+    "gh-pages": "gh-pages"
   },
   "dependencies": {
     "angular": "^1.4.8",
@@ -53,6 +55,7 @@
   },
   "devDependencies": {
     "budo": "latest",
+    "gh-pages": "^0.11.0",
     "jscs": "latest",
     "jshint": "latest"
   },
