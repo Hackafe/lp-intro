@@ -24,6 +24,7 @@
     "//hooks": "-",
     "pretest": "npm run check",
     "prestart": "npm run build",
+    "predeploy": "npm run build",
     "//tools": "-",
     "jscs": "jscs",
     "jshint": "jshint",
