@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-image: url('/img/cover.jpg');
+    background-size: 120% auto;
+    padding-top: 45%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.quotes {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .quote {
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+
+        &.ng-enter, &.ng-leave {
+            transition: 0.5s ease-in all;
+        }
+
+        &.ng-enter {
+            left: 100%;
+            &.ng-enter-active {
+                left: 0;
+            }
+        }
+
+        &.ng-leave {
+            opacity: 1;
+            &.ng-leave-active {
+                opacity: 0;
+            }
+        }
+
+        blockquote {
+            font-size: 2em;
+        }
+
+        p {
+            font-sinze: 4em;
+        }
+
+        pre {
+            font-size: 3em;
+        }
+    }
+}
+
+@import "../../node_modules/bootstrap/less/bootstrap";
